@@ -8,3 +8,6 @@ Using interfaces is more flexible because not every monster has the same abiliti
 
 ## Phase 3
 Polymorphism allows me to store different types of monsters in one ArrayList because they all extend DigitalMonster. Each monster can still use its own attack method. This is easier than creating separate lists for every monster type because I can manage all the monsters using one list and one loop.
+
+## Phase 4
+The instanceof operator helps check if a monster has a certain ability before using it. In my program, I used it to find monsters that can fly. This is useful in a game because some areas might only allow flying monsters to enter. It also prevents errors from trying to make a monster fly when it cannot.

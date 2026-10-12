@@ -98,5 +98,16 @@ public class Main {
         for (DigitalMonster monster : monsters) {
             monster.performAttack();
         }
+
+        System.out.println("\n--- Ability Scanner ---");
+
+        for (DigitalMonster monster : monsters) {
+            if (monster instanceof Flyable) {
+                System.out.println(monster.name + " is capable of flight!");
+                Flyable flyingMonster = (Flyable) monster;
+                flyingMonster.fly();
+            }
+        }
+
     }
 }
