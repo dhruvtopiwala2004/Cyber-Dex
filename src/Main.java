@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 abstract class DigitalMonster {
     String name;
@@ -53,15 +54,49 @@ class AquaMonster extends DigitalMonster implements Electric {
     }
 }
 
+class StormBird extends DigitalMonster implements Flyable, Electric {
+    public StormBird(String name, int level) {
+        super(name, level, "Electric");
+    }
+
+    @Override
+    public void performAttack() {
+        System.out.println(name + " uses Thunder Strike! Level: " + level);
+    }
+
+    @Override
+    public void fly() {
+        System.out.println(name + " is flying!");
+    }
+
+    @Override
+    public void shock() {
+        System.out.println(name + " uses Electric Shock!");
+    }
+}
+
+class RockMonster extends DigitalMonster {
+    public RockMonster(String name, int level) {
+        super(name, level, "Earth");
+    }
+
+    @Override
+    public void performAttack() {
+        System.out.println(name + " uses Rock Smash! Level: " + level);
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
-        FlameMonster flame = new FlameMonster("Flamie", 10);
-        AquaMonster aqua = new AquaMonster("Aqua", 8);
+        ArrayList<DigitalMonster> monsters = new ArrayList<>();
 
-        flame.performAttack();
-        flame.fly();
+        monsters.add(new FlameMonster("Flamie", 10));
+        monsters.add(new AquaMonster("Aqua", 8));
+        monsters.add(new StormBird("Stormy", 12));
+        monsters.add(new RockMonster("Rocky", 7));
 
-        aqua.performAttack();
-        aqua.shock();
+        for (DigitalMonster monster : monsters) {
+            monster.performAttack();
+        }
     }
 }
