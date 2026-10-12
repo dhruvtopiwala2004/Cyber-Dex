@@ -94,6 +94,8 @@ public class Main {
         monsters.add(new AquaMonster("Aqua", 8));
         monsters.add(new StormBird("Stormy", 12));
         monsters.add(new RockMonster("Rocky", 7));
+        monsters.add(new StormBird("Thunder", 15));
+        monsters.add(new AquaMonster("Splash", 5));
 
         for (DigitalMonster monster : monsters) {
             monster.performAttack();

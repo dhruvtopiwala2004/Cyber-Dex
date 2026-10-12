@@ -11,3 +11,6 @@ Polymorphism allows me to store different types of monsters in one ArrayList bec
 
 ## Phase 4
 The instanceof operator helps check if a monster has a certain ability before using it. In my program, I used it to find monsters that can fly. This is useful in a game because some areas might only allow flying monsters to enter. It also prevents errors from trying to make a monster fly when it cannot.
+
+## Phase 5
+During testing, I added more monsters to check if the program worked correctly. I checked that all monsters performed their attacks and only monsters with the Flyable interface appeared in the scanner. I did not find any errors during testing. I also reviewed the code using ChatGPT, which helped me check my use of abstract classes, interfaces, and polymorphism. I kept the code simple because it meets the assignment requirements.
